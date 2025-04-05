@@ -1,16 +1,31 @@
 return {
   "zbirenbaum/copilot.lua",
-  config = function()
-    require("copilot").setup({
-      suggestion = {
-        enabled = true,
-        auto_trigger = true,
-        keymap = {
-            accept = "<C-J>",
-            dismiss = "<C-x>"
+  cmd = "Copilot",
+  build = ":Copilot auth",
+  event = "BufReadPost",
+  opts = {
+    suggestion = {
+      keymap = {
+        accept = false, -- handled by completion engine
+      },
+    },
+  },
+  specs = {
+    {
+      "AstroNvim/astrocore",
+      opts = {
+        options = {
+          g = {
+            -- set the ai_accept function
+            ai_accept = function()
+              if require("copilot.suggestion").is_visible() then
+                require("copilot.suggestion").accept()
+                return true
+              end
+            end,
+          },
         },
       },
-      copilot_model = "gpt-4o-copilot"
-    })
-  end,
+    },
+  },
 }

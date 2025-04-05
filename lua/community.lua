@@ -10,6 +10,8 @@ return {
   { import = "astrocommunity.pack.lua" },
 
   -- import/override with your plugins folder
-  { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.fuzzy-finder.telescope-nvim" },
+  { import = "astrocommunity.recipes.ai" },
 }

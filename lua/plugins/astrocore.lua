@@ -1,4 +1,3 @@
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -63,7 +62,7 @@ return {
         ["<Leader>k"] = false,
         ["<Leader>l"] = false,
 
-       -- disable unnecessary lsp mappings
+        -- disable unnecessary lsp mappings
         ["<Leader>li"] = false,
         ["<Leader>lI"] = false,
         ["<Leader>lf"] = false,
@@ -78,25 +77,25 @@ return {
         ["<Leader>lG"] = false,
 
         -- lsp mappings
-        ["<Leader>gd"] = { function() vim.lsp.buf.definition() end, desc = "Go to definition"},
-        ["<Leader>gD"] = { function() vim.lsp.buf.declaration() end, desc = "Go to declaration"},
-        ["<Leader>vca"] = { function() vim.lsp.buf.code_action() end, desc = "Code Actions"},
-        ["<Leader>vd"] = { function() vim.diagnostic.open_float() end, desc = "Open Diagnostics Float"},
-        ["<Leader>K"] = { function() vim.lsp.buf.hover() end, desc = "LSP Hover"},
-        ["<Leader>rn"] = { function() vim.lsp.buf.rename() end, desc = "LSP Rename"},
+        ["<Leader>gD"] = { function() vim.lsp.buf.definition() end, desc = "Go to definition" },
+        ["<Leader>gd"] = { function() vim.lsp.buf.declaration() end, desc = "Go to declaration" },
+        ["<Leader>vca"] = { function() vim.lsp.buf.code_action() end, desc = "Code Actions" },
+        ["<Leader>vd"] = { function() vim.diagnostic.open_float() end, desc = "Open Diagnostics Float" },
+        ["K"] = { function() vim.lsp.buf.hover() end, desc = "LSP Hover" },
+        ["<Leader>rn"] = { function() vim.lsp.buf.rename() end, desc = "LSP Rename" },
 
         -- keep cursor in middle when jumping up and down
-        ["<C-d>"] = { "<C-d>zz", desc = "Jump down"},
-        ["<C-u>"] = { "<C-u>zz", desc = "Jump up"},
+        ["<C-d>"] = { "<C-d>zz", desc = "Jump down" },
+        ["<C-u>"] = { "<C-u>zz", desc = "Jump up" },
 
         -- go to end of line
         ["§"] = { "$", desc = "Go to end of line" },
 
         -- jump between windows
-        ["<Leader>h"] =  { "<C-w>h", desc = "Jump to left window" },
-        ["<Leader>j"] =  { "<C-w>j", desc = "Jump upwards" },
-        ["<Leader>k"] =  { "<C-w>k", desc = "Jump downwards" },
-        ["<Leader>l"] =  { "<C-w>l", desc = "Jump to left window" },
+        ["<Leader>h"] = { "<C-w>h", desc = "Jump to left window" },
+        ["<Leader>j"] = { "<C-w>j", desc = "Jump upwards" },
+        ["<Leader>k"] = { "<C-w>k", desc = "Jump downwards" },
+        ["<Leader>l"] = { "<C-w>l", desc = "Jump to left window" },
 
         -- move windows
         ["<S-L>"] = { "<C-w>L", desc = "Move window right" },
@@ -117,7 +116,7 @@ return {
         },
 
         -- terminal
-        ["<Leader>tf"] = false, -- disabling 
+        ["<Leader>tf"] = false, -- disabling
         ["<A-t>"] = { "<Cmd>ToggleTerm direction=float<CR>", desc = "Show ToggleTerm float" },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
@@ -129,13 +128,18 @@ return {
       },
       v = {
         -- move selected row up and down
-        ["J"] = { ":<C-u>exec 'move ' . (line(\"'>\")+1)<CR>gv=gv", desc = "Move row down"},
-        ["K"] = { ":<C-u>exec 'move ' . (line(\"'>\")-2)<CR>gv=gv", desc = "Move row up"},
+        ["J"] = { ":<C-u>exec 'move ' . (line(\"'>\")+1)<CR>gv=gv", desc = "Move row down" },
+        ["K"] = { ":<C-u>exec 'move ' . (line(\"'>\")-2)<CR>gv=gv", desc = "Move row up" },
       },
       t = {
         ["<Esc>"] = { "<c-\\><c-n>", desc = "Escape terminal mode" },
         ["<A-e>"] = { "<c-\\><c-n>", desc = "Exit terminal mode" },
-      }
+      },
+      i = {
+        -- Unnecessary cmp mappings that interfer
+        ["<C-j>"] = false,
+        ["<C-J>"] = false,
+      },
     },
   },
 }
