@@ -15,4 +15,5 @@ return {
   { import = "astrocommunity.fuzzy-finder.telescope-nvim" },
   { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.recipes.ai" },
+  { import = "astrocommunity.pack.typescript" },
 }
