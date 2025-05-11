@@ -77,8 +77,8 @@ return {
         ["<Leader>lG"] = false,
 
         -- lsp mappings
-        ["<Leader>gD"] = { function() vim.lsp.buf.definition() end, desc = "Go to definition" },
-        ["<Leader>gd"] = { function() vim.lsp.buf.declaration() end, desc = "Go to declaration" },
+        ["<Leader>gD"] = { function() vim.lsp.buf.declaration() end, desc = "Go to declaration" },
+        ["<Leader>gd"] = { function() vim.lsp.buf.definition() end, desc = "Go to definition" },
         ["<Leader>vca"] = { function() vim.lsp.buf.code_action() end, desc = "Code Actions" },
         ["<Leader>vd"] = { function() vim.diagnostic.open_float() end, desc = "Open Diagnostics Float" },
         ["K"] = { function() vim.lsp.buf.hover() end, desc = "LSP Hover" },
