@@ -17,4 +17,5 @@ return {
   { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.svelte" },
 }
