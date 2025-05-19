@@ -16,4 +16,5 @@ return {
   { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.rust" },
 }
