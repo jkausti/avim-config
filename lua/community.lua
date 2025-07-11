@@ -18,5 +18,4 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.svelte" },
-  { import = "astrocommunity.editing-support.refactoring-nvim" },
 }
