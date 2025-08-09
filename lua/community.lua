@@ -18,4 +18,7 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.svelte" },
+  { import = "astrocommunity.file-explorer.oil-nvim" },
+  -- { import = "astrocommunity.code-runner.overseer-nvim" },
+  { import = "astrocommunity.code-runner.executor-nvim" },
 }

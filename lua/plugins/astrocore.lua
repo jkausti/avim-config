@@ -2,7 +2,6 @@
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
 --       as this provides autocomplete and documentation while editing
-
 ---@type LazySpec
 return {
   "AstroNvim/astrocore",
@@ -97,6 +96,9 @@ return {
         ["<Leader>k"] = { "<C-w>k", desc = "Jump downwards" },
         ["<Leader>l"] = { "<C-w>l", desc = "Jump to left window" },
 
+        -- oil
+        ["<Leader>e"] = { "<Cmd>Oil<CR>", desc = "Open Oil" },
+
         -- move windows
         ["<S-L>"] = { "<C-w>L", desc = "Move window right" },
         ["<S-H>"] = { "<C-w>H", desc = "Move window left" },
@@ -125,6 +127,11 @@ return {
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+
+        -- executor.nvim mappings
+        ["<Leader>zr"] = { "<Cmd>ExecutorRun<CR>", desc = "ExecuteCommand" },
+        ["<Leader>zs"] = { "<Cmd>ExecutorSetCommand<CR>", desc = "Set command to be executed" },
+        ["<Leader>zz"] = { "<Cmd>ExecutorToggleDetail<CR>", desc = "Toggle Executor output" },
       },
       v = {
         -- move selected row up and down
@@ -132,7 +139,7 @@ return {
         ["K"] = { ":<C-u>exec 'move ' . (line(\"'>\")-2)<CR>gv=gv", desc = "Move row up" },
       },
       t = {
-        ["<Esc>"] = { "<c-\\><c-n>", desc = "Escape terminal mode" },
+        -- ["<Esc>"] = { "<c-\\><c-n>", desc = "Escape terminal mode" },
         ["<A-e>"] = { "<c-\\><c-n>", desc = "Exit terminal mode" },
       },
       i = {
