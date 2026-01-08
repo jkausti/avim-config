@@ -21,4 +21,6 @@ return {
   { import = "astrocommunity.file-explorer.oil-nvim" },
   -- { import = "astrocommunity.code-runner.overseer-nvim" },
   { import = "astrocommunity.code-runner.executor-nvim" },
+  { import = "astrocommunity.markdown-and-latex.markview-nvim" },
+  { import = "astrocommunity.pack.terraform" },
 }
