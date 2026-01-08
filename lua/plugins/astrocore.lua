@@ -26,6 +26,7 @@ return {
       -- see `:h vim.filetype.add` for usage
       extension = {
         foo = "fooscript",
+        nomad = "terraform",
       },
       filename = {
         [".foorc"] = "fooscript",
@@ -74,6 +75,7 @@ return {
         ["<Leader>lR"] = false,
         ["<Leader>ls"] = false,
         ["<Leader>lG"] = false,
+        ["<Leader>gd"] = false,
 
         -- lsp mappings
         ["<Leader>gD"] = { function() vim.lsp.buf.declaration() end, desc = "Go to declaration" },
@@ -129,10 +131,6 @@ return {
         -- ["<C-S>"] = false,
 
         -- executor.nvim mappings
-        -- ["<Leader>zr"] = { "<Cmd>ExecutorRun<CR>", desc = "ExecuteCommand" },
-        -- ["<Leader>zs"] = { "<Cmd>ExecutorSetCommand<CR>", desc = "Set command to be executed" },
-        -- ["<Leader>zz"] = { "<Cmd>ExecutorToggleDetail<CR>", desc = "Toggle Executor output" },
-
         -- zig commands
         ["<Leader>zr"] = { "<cmd>split | term zig run<cr>", desc = "Zig run" },
         ["<Leader>zt"] = { "<cmd>split | term zig test<cr>", desc = "Zig test" },

@@ -39,13 +39,40 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+      "basedpyright",
       "zls",
+      "terraformls",
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      terraformls = {
+        settings = {
+          terraform = {
+            format = {
+              enable = true,
+            },
+            lint = {
+              enable = true,
+              checks = {
+                all = true,
+                deprecated = true,
+                variable_defaults = true,
+              },
+            },
+          },
+        },
+      },
+    },
+    filetypes = {
+      -- specify filetypes that should be handled by specific language servers
+      -- e.g. to have the `pyright` language server handle `djangohtml` files
+      -- djangohtml = "pyright",
+      extension = {
+        nomad = "terraformls",
+        hcl = "terraformls",
+      },
     },
     -- customize how language servers are attached
     handlers = {

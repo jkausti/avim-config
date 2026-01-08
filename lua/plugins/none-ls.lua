@@ -17,8 +17,8 @@ return {
     -- (If you wish to replace, use `opts.sources = {}` instead of the `list_insert_unique` function)
     opts.sources = require("astrocore").list_insert_unique(opts.sources, {
       -- Set a formatter
-      -- null_ls.builtins.formatting.stylua,
-      -- null_ls.builtins.formatting.prettier,
+      null_ls.builtins.formatting.stylua,
+      null_ls.builtins.formatting.prettier,
       null_ls.builtins.formatting.black,
       null_ls.builtins.formatting.isort,
     })
