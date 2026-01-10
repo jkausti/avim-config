@@ -13,7 +13,7 @@ return {
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.fuzzy-finder.telescope-nvim" },
-  { import = "astrocommunity.completion.avante-nvim" },
+  -- { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.rust" },
