@@ -129,9 +129,15 @@ return {
         -- ["<C-S>"] = false,
 
         -- executor.nvim mappings
-        ["<Leader>zr"] = { "<Cmd>ExecutorRun<CR>", desc = "ExecuteCommand" },
-        ["<Leader>zs"] = { "<Cmd>ExecutorSetCommand<CR>", desc = "Set command to be executed" },
-        ["<Leader>zz"] = { "<Cmd>ExecutorToggleDetail<CR>", desc = "Toggle Executor output" },
+        -- ["<Leader>zr"] = { "<Cmd>ExecutorRun<CR>", desc = "ExecuteCommand" },
+        -- ["<Leader>zs"] = { "<Cmd>ExecutorSetCommand<CR>", desc = "Set command to be executed" },
+        -- ["<Leader>zz"] = { "<Cmd>ExecutorToggleDetail<CR>", desc = "Toggle Executor output" },
+
+        -- zig commands
+        ["<Leader>zr"] = { "<cmd>split | term zig run<cr>", desc = "Zig run" },
+        ["<Leader>zt"] = { "<cmd>split | term zig test<cr>", desc = "Zig test" },
+        ["<Leader>zz"] = { "<cmd>split | term zig build run<cr>", desc = "Zig build run" },
+        ["<Leader>tz"] = { "<cmd>split | term zig build test<cr>", desc = "Zig build test" },
       },
       v = {
         -- move selected row up and down
