@@ -17,6 +17,7 @@ return {
   { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.svelte" },
   { import = "astrocommunity.file-explorer.oil-nvim" },
   -- { import = "astrocommunity.code-runner.overseer-nvim" },
