@@ -135,6 +135,7 @@ return {
         ["<Leader>zr"] = { "<cmd>split | term zig run<cr>", desc = "Zig run" },
         ["<Leader>zt"] = { "<cmd>split | term zig test<cr>", desc = "Zig test" },
         ["<Leader>zz"] = { "<cmd>split | term zig build run<cr>", desc = "Zig build run" },
+        ["<Leader>zo"] = { "<cmd>split | term zig build -Doptimize=ReleaseSafe<cr>", desc = "Zig build run" },
         ["<Leader>tz"] = { "<cmd>split | term zig build test<cr>", desc = "Zig build test" },
       },
       v = {
