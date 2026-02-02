@@ -72,6 +72,7 @@ return {
       extension = {
         nomad = "terraformls",
         hcl = "terraformls",
+        templ = { "templ", "tailwindcss-language-server", "html", "gopls" },
       },
     },
     -- customize how language servers are attached
